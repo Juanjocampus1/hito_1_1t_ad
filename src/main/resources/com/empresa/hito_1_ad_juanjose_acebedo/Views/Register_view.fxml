@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.empresa.hito_1_ad_juanjose_acebedo.controller.RegisterController"
+      stylesheets="@../Styles/registerStyles.css">
+
+  <Label contentDisplay="CENTER" prefHeight="57.0" prefWidth="226.0" styleClass="title" text="Registro de usuario">
+    <font>
+      <Font size="27.0" />
+    </font>
+  </Label>
+
+  <GridPane alignment="CENTER" hgap="10" styleClass="grid-pane" vgap="10">
+    <Label styleClass="label" text="Nombre de usuario:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="usernameField" promptText="Nombre de usuario" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+    <Label styleClass="label" text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="emailField" promptText="Email" styleClass="text-field" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label styleClass="label" text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <PasswordField fx:id="passwordField" promptText="Contraseña" styleClass="password-field" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+    <Button fx:id="registerButton" onAction="#onRegisterButtonClick" styleClass="button" text="Registrarse" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+
+    <Button fx:id="alreadyHaveAccountButton" onAction="#switchToLogin" styleClass="link-button" text="Ya tengo una cuenta" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+    <columnConstraints>
+      <ColumnConstraints halignment="CENTER" />
+      <ColumnConstraints halignment="CENTER" />
+    </columnConstraints>
+
+    <rowConstraints>
+      <RowConstraints valignment="CENTER" />
+      <RowConstraints valignment="CENTER" />
+      <RowConstraints valignment="CENTER" />
+      <RowConstraints valignment="CENTER" />
+      <RowConstraints valignment="CENTER" />
+    </rowConstraints>
+  </GridPane>
+</VBox>
