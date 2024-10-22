@@ -1,5 +1,6 @@
 package com.empresa.hito_1_ad_juanjose_acebedo.controller;
 
+import com.empresa.hito_1_ad_juanjose_acebedo.Repository.Persistence;
 import com.empresa.hito_1_ad_juanjose_acebedo.Repository.UserDAO;
 import com.empresa.hito_1_ad_juanjose_acebedo.entities.UserEntity;
 import javafx.fxml.FXML;
@@ -43,6 +44,7 @@ public class LoginController {
         List<UserEntity> users = userDAO.getAllUsers();
         for (UserEntity user : users) {
             if (user.getName().equals(name) && user.getPassword().equals(password)) {
+                Persistence.loggedInUsername = name;
                 return true;
             }
         }
